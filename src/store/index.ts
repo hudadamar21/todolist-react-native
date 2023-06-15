@@ -65,6 +65,11 @@
 
 import {atomWithStorage} from 'jotai/utils';
 import {Todo} from '../types/Todo';
+import {atom} from 'jotai';
+
+export const valueAtom = atom<string>('');
+export const editIdAtom = atom<string>('');
+export const isEditAtom = atom<boolean>(false);
 
 export const todosAtom = atomWithStorage<Todo[]>('todos', [
   {
